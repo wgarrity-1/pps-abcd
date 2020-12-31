@@ -9,7 +9,7 @@ define('DISPLAY_FORMAT', "l, F jS");
 define('BOOLEAN_REMOTE', true);
 
 # function determines the current date, formats it, then determines the dates for the next 5 days, then formats thoes dates to the format of the dates stored in the DB, stores it all in an array, then returns that array. You can also customize the number of dates this function puts out.
-function getNeededDates($num_dates = 5, $date_format = DATE_FORMAT){
+function getNeededDates($num_dates, $date_format = DATE_FORMAT){
     
     # variable the stores the current date
     $current_date = new DateTime();
@@ -125,8 +125,8 @@ $day_off_schedule = [
     "b6" => "<td></td>"
 ];
 
-# function that takes in the current type of day, and then decides which schedule it should return based on the type of day and if school is remote or not
-function determineTodaysSchedule($current_day_type){
+# function that takes in the type of day, and then decides which schedule it should return based on the type of day and if school is remote or not
+function determineSchedule($day_type){
     
     # globals all of the hardcoded schedules
     global $ab_remote_schedule, $cd_remote_schedule, $day_off_schedule;
@@ -135,10 +135,10 @@ function determineTodaysSchedule($current_day_type){
     if (BOOLEAN_REMOTE){
         
         # if the current day is an A or B day, return $ab_remote_schedule
-        if($current_day_type === 'A' or $current_day_type === 'B'){
+        if($day_type === 'A' or $day_type === 'B'){
             return $ab_remote_schedule;
         # if the current day is an C or D day, return $cd_remote_schedule
-        } else if($current_day_type === 'C' or $current_day_type === 'D'){
+        } else if($day_type === 'C' or $day_type === 'D'){
             return $cd_remote_schedule;
         # otherwise, return the $day_off_schedule
         } else{
@@ -149,3 +149,27 @@ function determineTodaysSchedule($current_day_type){
         # hybrid schedules haven't come out yet so this part of the program is blank
     }
 }
+
+# code to be initialized upon being included
+
+# gets the needed dates from the function getNeededDates and stores the results in $needed_dates
+$needed_dates = getNeededDates($extra_dates);
+
+# creates an empty array for formatted needed dates to be displayed below
+$formatted_needed_dates = [];
+
+# gets the type of days from the function determineDays and stores the results in #date_types
+$date_types = determineDays($database_location, $needed_dates);
+
+# for every $needed_date
+foreach ($needed_dates as $date){
+    
+    # convert them into the proper date format for displaying
+    $formatted_date = convertDateFormat($date, DATE_FORMAT, DISPLAY_FORMAT);
+    
+    # push the result tot he $formatted_needed_dates array
+    array_push($formatted_needed_dates, $formatted_date);
+}
+
+# gets the currect day schedule from the function determineSchedule and puts the result in the variable $todays_schedule
+$todays_schedule = determineSchedule($date_types[$formatted_needed_dates[0]]);

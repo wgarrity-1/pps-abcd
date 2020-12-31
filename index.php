@@ -2,25 +2,16 @@
 
 # William Garrity
 # 12/30/2020
-# Purpose of this PHP code is to grab the day types from the ///[script]/// and display it on this site
+# Purpose of this PHP code is to grab the day types from the assets/scripts/main.php script and display it on this site
 
 # sets the location of the sqlite database file
 $database_location = "assets/db/abcd-database.db";
 
+# sets how many extra dates to fetch
+$extra_dates = 5;
 
+# includes the functions and code from the script main.php in the scripts directory of the assets directory
 include "assets/scripts/main.php";
-
-$needed_dates = getNeededDates();
-$formatted_needed_dates = [];
-
-$date_types = determineDays($database_location, $needed_dates);
-
-foreach ($needed_dates as $date){
-    $formatted_date = convertDateFormat($date, DATE_FORMAT, DISPLAY_FORMAT);
-    array_push($formatted_needed_dates, $formatted_date);
-}
-
-$todays_schedule = determineTodaysSchedule($date_types[$formatted_needed_dates[0]]);
 
 ?>
 <!DOCTYPE html>
