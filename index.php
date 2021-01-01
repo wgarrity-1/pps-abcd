@@ -209,7 +209,8 @@ include "assets/scripts/main.php";
         
         <div id="created-by">Site Created by William Garrity</div>
         <div id="see-schedules"><a href="schedules.html">See Full Schedules</a></div>
-        <div id="embed">Embed This Site</div>
+        <div id="embed"><a href="embed/index.php">Embed This Site</a></div>
+        <div id="contact"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe0q4J-G4v-dvZeb01JuLjBRxiyuKWSyGRxKstK6TLBP4LHMA/viewform?usp=sf_link">Contact Form</a></div>
         
     </footer>
 	

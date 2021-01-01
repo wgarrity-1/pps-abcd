@@ -141,14 +141,6 @@ header {
     padding: 10px;
 }
 
-#see-schedules {
-    padding: 10px;
-}
-
-#embed {
-    padding: 10px;
-}
-
 footer {
     padding: 10px;
     color: white;
@@ -158,16 +150,22 @@ footer {
     flex: 0 1 auto;
 }
 
+footer div{
+    margin: 10px;
+}
+
 .upcomming-header {
     font-size: 3rem;
     text-align: center;
 }
 
-footer a {
+footer a, #contact {
     color: white;
     transition: color 0.25s ease-in-out;
+    text-decoration: underline;
 }
 
-footer a:hover{
+footer a:hover, #contact:hover{
     color: lightblue;
+    text-decoration: underline;
 }

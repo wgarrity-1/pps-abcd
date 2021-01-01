@@ -19,22 +19,62 @@ include "../../assets/scripts/main.php";
 <head>
 	<meta charset="utf-8">
 	<title>One Day Simple</title>
-    <link rel="stylesheet" href="../../assets/css/embed-main.css">
+    
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        :root {
+            --main-color: #5f0c1f;
+        }
+
+        html, body{
+            margin: 0px;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .day-container {
+            margin-right: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--main-color);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .letter {
+            font-size: 2.3em;
+        }
+
+        
+    </style>
+    
 </head>
 
 <body>
     
-    <div class="current">
 
-        <div class="day-container">
-            <div class="day">
-                <?=$formatted_needed_dates[0];?>
-            </div>
-            <div class="letter">
-                <?=$date_types[$formatted_needed_dates[0]]?>
-            </div>
+    <div class="day-container" style="margin-right: 0px;">
+        <div class="day">
+            <?=$formatted_needed_dates[0];?>
         </div>
-
+        <div class="letter">
+            <?=$date_types[$formatted_needed_dates[0]]?>
+        </div>
     </div>
     
 </body>
