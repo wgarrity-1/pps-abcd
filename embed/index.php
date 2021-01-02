@@ -1,9 +1,9 @@
 <?php
 
 $iframe_code = [
-    "one-day-simple" => "<iframe src='one-day/simple.php' height='200' width='200' style='border: 0px;'></iframe>",
-    "one-day-middle" => "<iframe src='one-day/schedule-middle.php' height='500' width='700' style='border: 0px;'></iframe>",
-    "one-day-high" => "<iframe src='one-day/schedule-middle.php' height='500' width='700' style='border: 0px;'></iframe>"
+    "one-day-simple" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/simple.php' height='200' width='200' style='border: 0px;'></iframe>",
+    "one-day-middle" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-middle.php' height='500' width='700' style='border: 0px;'></iframe>",
+    "one-day-high" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-middle.php' height='500' width='700' style='border: 0px;'></iframe>"
 ]
 
 
@@ -56,7 +56,7 @@ $iframe_code = [
     <main>
         
         <div class="how-to-embed-links">
-            <a href="">How to Embed These on Canvas</a>
+            <a href="https://docs.google.com/document/d/1HLWoVfNLSCcT99PsBNcdXzTlfNYM0LBeXFiWVw5JVPw/edit?usp=sharing">How to Embed HTML Content on Canvas - Specifically for The Embeds Below</a>
         </div>
         
         <div class="embed-views">

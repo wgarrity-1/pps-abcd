@@ -57,7 +57,7 @@ include "../../assets/scripts/main.php";
         }
 
         .letter {
-            font-size: 2.3em;
+            font-size: 2.5rem;
         }
 
         
