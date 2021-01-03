@@ -150,6 +150,35 @@ function determineSchedule($day_type){
     }
 }
 
+# array of favicons
+$favicons = [
+    "A" => "<link rel='icon' type='image/png' href='assets/favicon/favicon_a.png'>",
+    "B" => "<link rel='icon' type='image/png' href='assets/favicon/favicon_b.png'>",
+    "C" => "<link rel='icon' type='image/png' href='assets/favicon/favicon_c.png'>",
+    "D" => "<link rel='icon' type='image/png' href='assets/favicon/favicon_d.png'>",
+    "blank" => "<link rel='icon' type='image/png' href='assets/favicon/favicon_blank.png'>"
+];
+
+# function that takes in the type of day and returns a favicon based on the the type of day
+function getFavicon($day_type){
+    
+    # globals the $favicons array
+    global $favicons;
+    
+    # types of days that are going to be shown in the favicon, used so that I don't have to type in a lot of else if statements
+    $types_of_days = ["A", "B", "C", "D"];
+    
+    # if $day_type is in the array $types_of_days
+    if(in_array($day_type, $types_of_days)){
+        # return the favicon that coresponds to the type of day
+        return $favicons[$day_type];
+    } else {
+        # otherwise, return the blank favicon
+        return $favicons["blank"];
+    }
+    
+}
+
 # code to be initialized upon being included
 
 # gets the needed dates from the function getNeededDates and stores the results in $needed_dates
@@ -173,3 +202,6 @@ foreach ($needed_dates as $date){
 
 # gets the currect day schedule from the function determineSchedule and puts the result in the variable $todays_schedule
 $todays_schedule = determineSchedule($date_types[$formatted_needed_dates[0]]);
+
+# gets the favicon from the function getFavicon and puts the result in the variable $favicon
+$favicon = getFavicon($date_types[$formatted_needed_dates[0]]);

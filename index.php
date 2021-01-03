@@ -22,6 +22,37 @@ include "assets/scripts/main.php";
 	<title>Is Today an A, B, C, or D Day?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- CSS Variables Polyfill for IE11 so that this site displays properly on IE11, literally nobody is using IE, or should, but putting this in here just in case that one person who uses IE tries to visit this site gets to see this site work properly. Source code https://github.com/nuxodin/ie11CustomProperties -->
+    <script>window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
+    
+    <?=$favicon?>
+    
+    <script>
+        
+        /* Grabbed from Stack Overflow https://stackoverflow.com/questions/1217929/how-to-automatically-reload-a-web-page-at-a-certain-time/1217945#1217945 */
+        
+        function refreshAt(hours, minutes, seconds) {
+            var now = new Date();
+            var then = new Date();
+
+            if(now.getUTCHours() > hours ||
+               (now.getUTCHours() == hours && now.getUTCMinutes() > minutes) ||
+                now.getUTCHours() == hours && now.getUTCMinutes() == minutes && now.getUTCSeconds() >= seconds) {
+                then.setUTCDate(now.getUTCDate() + 1);
+            }
+            then.setUTCHours(hours);
+            then.setUTCMinutes(minutes);
+            then.setUTCSeconds(seconds);
+
+            var timeout = (then.getTime() - now.getTime());
+            setTimeout(function() { window.location.reload(true); }, timeout);
+        }
+        
+        /* refresh at midnight UTC */
+        refreshAt(0,0,0);
+        
+    </script>
 </head>
 
 <body>
