@@ -43,7 +43,7 @@ include "../../assets/scripts/main.php";
 
             <tr>
                 <th>Time</th>
-                <th>A Day</th>
+                <th>Period</th>
             </tr>
 
             <tr>
