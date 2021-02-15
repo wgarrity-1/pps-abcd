@@ -65,12 +65,16 @@ body {
     font-weight: bold;
 }
 
-.periodset-1 {
-    background-color: lightblue;
+.periodset-1g1 {
+    background-color: lightgreen;
+}
+
+.periodset-1g2 {
+    background-color: lightgray;
 }
 
 .periodset-2 {
-    background-color: lightgreen;
+    background-color: skyblue;
 }
 
 .organizeset {

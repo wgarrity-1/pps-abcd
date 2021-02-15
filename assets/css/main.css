@@ -94,12 +94,16 @@ main {
     font-weight: bold;
 }
 
-.periodset-1 {
-    background-color: lightblue;
+.periodset-1g1 {
+    background-color: lightgreen;
+}
+
+.periodset-1g2 {
+    background-color: lightgray;
 }
 
 .periodset-2 {
-    background-color: lightgreen;
+    background-color: skyblue;
 }
 
 .organizeset {
@@ -168,4 +172,34 @@ footer a, #contact {
 footer a:hover, #contact:hover{
     color: lightblue;
     text-decoration: underline;
+}
+
+#no-school{
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .schedule-table th{
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .schedule-table td{
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .schedule-table th{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .schedule-table td{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
 }

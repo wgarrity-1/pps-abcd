@@ -1,7 +1,7 @@
 <?php
 
 # William Garrity
-# 12/30/2020
+# 2/15/2021
 # Purpose of this PHP code is to grab the day types from the assets/scripts/main.php script and display it on this site
 
 # sets the location of the sqlite database file
@@ -84,49 +84,7 @@ include "assets/scripts/main.php";
                         Middle School Schedule:
                     </div>
                     
-                    <table class="schedule-table">
-                        
-                        <tr>
-                            <th>Time</th>
-                            <th>Period</th>
-                        </tr>
-                        
-                        <tr>
-                            <td>7:35 - 8:20</td>
-                            <?=$todays_schedule['b1']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>8:25 - 9:10</td>
-                            <?=$todays_schedule['b2']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>9:15 - 10:01</td>
-                            <?=$todays_schedule['b3']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>10:01 - 12:07</td>
-                            <?=$todays_schedule['lunch']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>12:07 - 12:52</td>
-                            <?=$todays_schedule['b4']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>12:55 - 1:40</td>
-                            <?=$todays_schedule['b5']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>1:43 - 2:28</td>
-                            <?=$todays_schedule['b6']?>
-                        </tr>
-                        
-                    </table>
+                    <?=determineSchedule('middle', $date_types[$formatted_needed_dates[0]])?>
                     
                 </div>
                 
@@ -136,49 +94,7 @@ include "assets/scripts/main.php";
                         High School Schedule:
                     </div>
                     
-                    <table class="schedule-table">
-                        
-                        <tr>
-                            <th>Time</th>
-                            <th>Period</th>
-                        </tr>
-                        
-                        <tr>
-                            <td>7:25 - 8:10</td>
-                            <?=$todays_schedule['b1']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>8:15 - 9:00</td>
-                            <?=$todays_schedule['b2']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>9:05 - 9:52</td>
-                            <?=$todays_schedule['b3']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>9:52 - 11:55</td>
-                            <?=$todays_schedule['lunch']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>11:55 - 12:40</td>
-                            <?=$todays_schedule['b4']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>12:45 - 1:30</td>
-                            <?=$todays_schedule['b5']?>
-                        </tr>
-                        
-                        <tr>
-                            <td>1:35 - 2:20</td>
-                            <?=$todays_schedule['b6']?>
-                        </tr>
-                        
-                    </table>
+                    <?=determineSchedule('high', $date_types[$formatted_needed_dates[0]])?>
                     
                 </div>
                 

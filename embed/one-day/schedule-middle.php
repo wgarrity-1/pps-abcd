@@ -1,6 +1,6 @@
 <?php
 # William Garrity
-# 12/31/2020
+# 2/15/2021
 # See index.php in the DirectoryRoot for the purpose because this code does basically the same thing
 
 # sets the location of the sqlite database file
@@ -38,50 +38,8 @@ include "../../assets/scripts/main.php";
     
     <div class="schedule">
         
+        <?=determineSchedule('middle', $date_types[$formatted_needed_dates[0]])?>
         
-        <table class="schedule-table">
-
-            <tr>
-                <th>Time</th>
-                <th>Period</th>
-            </tr>
-
-            <tr>
-                <td>7:35 - 8:20</td>
-                <?=$todays_schedule['b1']?>
-            </tr>
-
-            <tr>
-                <td>8:25 - 9:10</td>
-                <?=$todays_schedule['b2']?>
-            </tr>
-
-            <tr>
-                <td>9:15 - 10:01</td>
-                <?=$todays_schedule['b3']?>
-            </tr>
-
-            <tr>
-                <td>10:01 - 12:07</td>
-                <?=$todays_schedule['lunch']?>
-            </tr>
-
-            <tr>
-                <td>12:07 - 12:52</td>
-                <?=$todays_schedule['b4']?>
-            </tr>
-
-            <tr>
-                <td>12:55 - 1:40</td>
-                <?=$todays_schedule['b5']?>
-            </tr>
-
-            <tr>
-                <td>1:43 - 2:28</td>
-                <?=$todays_schedule['b6']?>
-            </tr>
-
-        </table>
     </div>
     
 </body>
