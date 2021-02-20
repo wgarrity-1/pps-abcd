@@ -8,7 +8,7 @@ include "tables.php"; # contains the schedules
 define('DATE_FORMAT', "l, F j, Y");
 define('DISPLAY_FORMAT', "l, F jS");
 
-define('BOOLEAN_REMOTE', true);
+define('BOOLEAN_REMOTE', false);
 
 # function determines the current date, formats it, then determines the dates for the next 5 days, then formats thoes dates to the format of the dates stored in the DB, stores it all in an array, then returns that array. You can also customize the number of dates this function puts out.
 function getNeededDates($num_dates, $date_format = DATE_FORMAT){

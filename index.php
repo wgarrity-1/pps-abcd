@@ -30,7 +30,9 @@ include "assets/scripts/main.php";
     
     <script>
         
-        /* Grabbed from Stack Overflow https://stackoverflow.com/questions/1217929/how-to-automatically-reload-a-web-page-at-a-certain-time/1217945#1217945 */
+        /* Grabbed from Stack Overflow https://stackoverflow.com/questions/1217929/how-to-automatically-reload-a-web-page-at-a-certain-time/1217945#1217945
+           Written by Andrew Moore under the Creative Commons CC BY-SA 2.5 license https://creativecommons.org/licenses/by-sa/2.5/
+           This script is licensed under those same terms */
         
         function refreshAt(hours, minutes, seconds) {
             var now = new Date();
@@ -155,7 +157,7 @@ include "assets/scripts/main.php";
     <footer>
         
         <div id="created-by">Site Created by William Garrity</div>
-        <div id="see-schedules"><a href="schedules.html">See Full Schedules</a></div>
+        <div id="see-schedules"><a href="https://docs.google.com/document/d/10AsMpaTQHgyvpkZ617QAIu6Q960K_rP9PePc6a3BmYY/edit">PPS Schedule Designation Document</a></div>
         <div id="embed"><a href="embed/index.php">Embed This Site</a></div>
         <div id="contact"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe0q4J-G4v-dvZeb01JuLjBRxiyuKWSyGRxKstK6TLBP4LHMA/viewform?usp=sf_link">Contact Form</a></div>
         
