@@ -81,6 +81,18 @@ body {
     background-color: yellow;
 }
 
+.periodset-1-cte-green {
+    background-color: lightgreen;
+}
+
+.periodset-1-cte-gold {
+    background-color: gold;
+}
+
+.periodset-1-cte-shop {
+    background-color: sandybrown;
+}
+
 .schedule-header {
     font-size: 1.5rem;
     text-align: center;

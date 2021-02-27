@@ -3,7 +3,9 @@
 $iframe_code = [
     "one-day-simple" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/simple.php' height='200' width='200' style='border: 0px;'></iframe>",
     "one-day-middle" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-middle.php' height='500' width='700' style='border: 0px;'></iframe>",
-    "one-day-high" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-high.php' height='500' width='700' style='border: 0px;'></iframe>"
+    "one-day-high" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-high.php' height='500' width='700' style='border: 0px;'></iframe>",
+    "one-day-cte-junior" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-cte-junior.php' height='500' width='700' style='border: 0px;'></iframe>",
+    "one-day-cte-senior" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-cte-senior.php' height='500' width='700' style='border: 0px;'></iframe>",
 ]
 
 
@@ -57,6 +59,13 @@ $iframe_code = [
         Embed This Site
     </header>
     
+    <nav>
+        <a href="../index.php">Normal Schedule</a>
+        <a href="../cte.php">CTE Schedule</a>
+        <a href="https://docs.google.com/document/d/10AsMpaTQHgyvpkZ617QAIu6Q960K_rP9PePc6a3BmYY/edit">PPS Schedule Designation Document</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0q4J-G4v-dvZeb01JuLjBRxiyuKWSyGRxKstK6TLBP4LHMA/viewform?usp=sf_link">Contact Form</a>
+    </nav>
+    
     <main>
         
         <div class="how-to-embed-links">
@@ -80,6 +89,16 @@ $iframe_code = [
             <h2>Code:</h2>
             <pre><code class="html"><?=htmlspecialchars($iframe_code["one-day-high"]);?></code></pre>
             
+            <h1>One Day with Junior CTE Schedule</h1>
+            <?=$iframe_code["one-day-cte-junior"]?>
+            <h2>Code:</h2>
+            <pre><code class="html"><?=htmlspecialchars($iframe_code["one-day-cte-junior"]);?></code></pre>
+            
+            <h1>One Day with Senior CTE Schedule</h1>
+            <?=$iframe_code["one-day-cte-senior"]?>
+            <h2>Code:</h2>
+            <pre><code class="html"><?=htmlspecialchars($iframe_code["one-day-cte-senior"]);?></code></pre>
+            
             
         </div>
         
@@ -90,7 +109,6 @@ $iframe_code = [
     <footer>
         
         <div id="created-by">Site Created by William Garrity</div>
-        <div id="contact"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe0q4J-G4v-dvZeb01JuLjBRxiyuKWSyGRxKstK6TLBP4LHMA/viewform?usp=sf_link">Contact Form</a></div>
         
     </footer>
     

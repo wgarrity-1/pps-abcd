@@ -2,7 +2,7 @@
 
 # William Garrity
 # 2/27/2021
-# Purpose of this PHP code is to grab the day types from the assets/scripts/main.php script and display it on this site
+# Purpose of this PHP code is to grab the day types from the assets/scripts/main.php script and display it on this site for CTE students
 
 # sets the location of the sqlite database file
 $database_location = "assets/db/abcd-database.db";
@@ -19,7 +19,7 @@ include "assets/scripts/main.php";
 
 <head>
 	<meta charset="utf-8">
-	<title>Is Today an A, B, C, or D Day?</title>
+	<title>CTE Schedule | Is Today an A, B, C, or D Day?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/main.css">
     
@@ -64,7 +64,7 @@ include "assets/scripts/main.php";
     </header>
     
     <nav>
-        <a href="cte.php">CTE Schedule</a>
+        <a href="index.php">Normal Schedule</a>
         <a href="https://docs.google.com/document/d/10AsMpaTQHgyvpkZ617QAIu6Q960K_rP9PePc6a3BmYY/edit">PPS Schedule Designation Document</a>
         <a href="embed/index.php">Embed This Site</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0q4J-G4v-dvZeb01JuLjBRxiyuKWSyGRxKstK6TLBP4LHMA/viewform?usp=sf_link">Contact Form</a>
@@ -90,20 +90,20 @@ include "assets/scripts/main.php";
                 <div class="middle-schedule">
                     
                     <div class="schedule-header">
-                        Middle School Schedule:
+                        Junior CTE Schedule:
                     </div>
                     
-                    <?=determineSchedule('middle', $date_types[$formatted_needed_dates[0]])?>
+                    <?=determineSchedule('cte_junior', $date_types[$formatted_needed_dates[0]])?>
                     
                 </div>
                 
                 <div class="high-schedule">
                     
                     <div class="schedule-header">
-                        High School Schedule:
+                        Senior CTE Schedule:
                     </div>
                     
-                    <?=determineSchedule('high', $date_types[$formatted_needed_dates[0]])?>
+                    <?=determineSchedule('cte_senior', $date_types[$formatted_needed_dates[0]])?>
                     
                 </div>
                 

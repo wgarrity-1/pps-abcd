@@ -1,6 +1,6 @@
 <?php
 # William Garrity
-# 2/15/2021
+# 2/27/2021
 # This program contains the functions getNeededDates(), determineDays(), convertDateFormat(), and determineSchedule() which helps to determine what the current day type is, the next 5 day types, as well as the current day's schedule.
 
 include "tables.php"; # contains the schedules
@@ -93,13 +93,61 @@ function convertDateFormat($date, $old_date_format, $new_date_format){
 }
 
 # function that takes in schedule type (middle or high) and day type, and then returns a schedule in html table format based on the schedule type, day type, and if the district is in remote or not
-function determineSchedule($schedule_type,$day_type){
+function determineSchedule($schedule_type, $day_type){
     
     # globals all of the hardcoded schedules
-    global $remote_ab_middle, $remote_ab_high, $remote_cd_middle, $remote_cd_high, $hybrid_a_middle, $hybrid_a_high, $hybrid_b_middle, $hybrid_b_high, $hybrid_c_middle, $hybrid_c_high, $hybrid_d_middle, $hybrid_d_high, $blank;
+    global $remote_ab_middle, $remote_ab_high, $remote_cd_middle, $remote_cd_high, $hybrid_a_middle, $hybrid_a_high, $hybrid_b_middle, $hybrid_b_high, $hybrid_c_middle, $hybrid_c_high, $hybrid_d_middle, $hybrid_d_high, $cte_junior_ab, $cte_junior_c, $cte_junior_d, $cte_senior_a, $cte_senior_b, $cte_senior_cd, $blank;
     
+    # if schedule type is equal to cte_junior or cte_senior (here so that the rest of the if statements are skipped if a cte schedule is requested as they won't be remote or anything)
+    if ($schedule_type === 'cte_junior' or $schedule_type === 'cte_senior'){
+        
+        # if the schedule type is equal to cte_junior
+        if ($schedule_type === 'cte_junior'){
+            
+            # switch statement that returns the right cte junior schedule depending on what day it is
+            switch ($day_type){
+                
+                case 'A':
+                case 'B':
+                    return $cte_junior_ab;
+                    break;
+                case 'C':
+                    return $cte_junior_c;
+                    break;
+                case 'D':
+                    return $cte_junior_d;
+                    break;
+                default:
+                    return $blank;
+                
+            }
+        
+        # if the schedule type is cte_senior
+        } else {
+            
+            # switch statement that returns the right cte senior schedule depending on what day it is
+            switch ($day_type){
+                
+                case 'A':
+                    return $cte_senior_a;
+                    break;
+                case 'B':
+                    return $cte_senior_b;
+                    break;
+                case 'C':
+                case 'D':
+                    return $cte_senior_cd;
+                    break;
+                default:
+                    return $blank;
+                
+            }
+            
+        }
+        
+    }
     # if the constant BOOLEAN_REMOTE is true (which is set to true if school is remote), give only remote schedules, else give hybrid schedules
-    if (BOOLEAN_REMOTE){
+    else if (BOOLEAN_REMOTE){
         
         # if the schedule type is middle
         if($schedule_type === 'middle'){

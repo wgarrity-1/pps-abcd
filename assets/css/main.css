@@ -110,6 +110,18 @@ main {
     background-color: yellow;
 }
 
+.periodset-1-cte-green {
+    background-color: lightgreen;
+}
+
+.periodset-1-cte-gold {
+    background-color: gold;
+}
+
+.periodset-1-cte-shop {
+    background-color: sandybrown;
+}
+
 .schedules {
     margin: 20px 0px;
     display: flex;
@@ -132,11 +144,33 @@ main {
 header {
     font-size: 3rem;
     text-align: center;
-    border-bottom: 10px solid var(--secondary-color);
     padding: 20px 10px;
     background-color: var(--main-color);
     color: white;
     flex: 0 1 auto;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    color: white;
+	font-size: 1.1rem;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	text-decoration: none;
+}
+
+nav a:hover {
+    color: black;
+    background-color: white;
 }
 
 #created-by {
