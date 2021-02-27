@@ -15,7 +15,7 @@ include "assets/scripts/main.php";
 
 ?>
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">

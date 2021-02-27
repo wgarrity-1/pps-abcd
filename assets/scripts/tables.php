@@ -551,7 +551,7 @@ $hybrid_d_high = '<table class="schedule-table">
 
 
 # blank schedule
-$blank = "<p id='no-school'>No School!</p>";
+$blank = "<p class='no-school'>No School!</p>";
 
 # cte schedules
 $cte_junior_ab = '<table class="schedule-table">
