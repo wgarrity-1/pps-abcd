@@ -51,8 +51,8 @@ include "assets/scripts/main.php";
             setTimeout(function() { window.location.reload(true); }, timeout);
         }
         
-        /* refresh at midnight UTC */
-        refreshAt(0,0,0);
+        /* refresh at 5 minutes after midnight UTC */
+        refreshAt(0,5,0);
         
     </script>
 </head>
