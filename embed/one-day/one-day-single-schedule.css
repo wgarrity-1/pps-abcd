@@ -59,12 +59,6 @@ body {
     text-align: center;
 }
 
-.schedule-table td:nth-child(1){
-    background-color: gray;
-    color: white;
-    font-weight: bold;
-}
-
 .periodset-1g1 {
     background-color: lightgreen;
 }
@@ -104,4 +98,10 @@ body {
     box-sizing: border-box;
     margin-left: 20px;
     height: 100%;
+}
+
+.schedule-table .tableside{
+    background-color: gray;
+    color: white;
+    font-weight: bold;
 }
