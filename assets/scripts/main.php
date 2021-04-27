@@ -1,6 +1,6 @@
 <?php
 # William Garrity
-# 2/27/2021
+# 4/22/2021
 # This program contains the functions getNeededDates(), determineDays(), convertDateFormat(), and determineSchedule() which helps to determine what the current day type is, the next 5 day types, as well as the current day's schedule.
 
 include "tables.php"; # contains the schedules
@@ -96,7 +96,7 @@ function convertDateFormat($date, $old_date_format, $new_date_format){
 function determineSchedule($schedule_type, $day_type){
     
     # globals all of the hardcoded schedules
-    global $remote_ab_middle, $remote_ab_high, $remote_cd_middle, $remote_cd_high, $hybrid_a_middle, $hybrid_a_high, $hybrid_b_middle, $hybrid_b_high, $hybrid_c_middle, $hybrid_c_high, $hybrid_d_middle, $hybrid_d_high, $cte_junior_ab, $cte_junior_c, $cte_junior_d, $cte_senior_a, $cte_senior_b, $cte_senior_cd, $blank;
+    global $remote_ab_middle, $remote_ab_high, $remote_cd_middle, $remote_cd_high, $hybrid_a_middle, $hybrid_a_high, $hybrid_b_middle, $hybrid_b_high, $hybrid_c_middle, $hybrid_c_high, $hybrid_d_middle, $hybrid_d_high, $cte_junior_ab, $cte_junior_c, $cte_junior_d, $cte_senior_a, $cte_senior_b, $cte_senior_cd, $full_ab_middle, $full_cd_middle, $blank;
     
     # if schedule type is equal to cte_junior or cte_senior (here so that the rest of the if statements are skipped if a cte schedule is requested as they won't be remote or anything)
     if ($schedule_type === 'cte_junior' or $schedule_type === 'cte_senior'){
@@ -193,16 +193,12 @@ function determineSchedule($schedule_type, $day_type){
             switch($day_type){
                     
                 case 'A':
-                    return $hybrid_a_middle;
-                    break;
                 case 'B':
-                    return $hybrid_b_middle;
+                    return $full_ab_middle;
                     break;
                 case 'C':
-                    return $hybrid_c_middle;
-                    break;
                 case 'D':
-                    return $hybrid_d_middle;
+                    return $full_cd_middle;
                     break;
                 default:
                     return $blank;
