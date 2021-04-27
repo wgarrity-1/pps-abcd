@@ -2,7 +2,7 @@
 
 $iframe_code = [
     "one-day-simple" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/simple.php' height='200' width='200' style='border: 0px;'></iframe>",
-    "one-day-middle" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-middle.php' height='500' width='700' style='border: 0px;'></iframe>",
+    "one-day-middle" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-middle.php' height='700' width='700' style='border: 0px;'></iframe>",
     "one-day-high" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-high.php' height='500' width='700' style='border: 0px;'></iframe>",
     "one-day-cte-junior" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-cte-junior.php' height='500' width='700' style='border: 0px;'></iframe>",
     "one-day-cte-senior" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-cte-senior.php' height='500' width='700' style='border: 0px;'></iframe>",
