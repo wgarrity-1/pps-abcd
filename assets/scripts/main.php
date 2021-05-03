@@ -1,6 +1,6 @@
 <?php
 # William Garrity
-# 4/22/2021
+# 5/3/2021
 # This program contains the functions getNeededDates(), determineDays(), convertDateFormat(), and determineSchedule() which helps to determine what the current day type is, the next 5 day types, as well as the current day's schedule.
 
 include "tables.php"; # contains the schedules
@@ -285,3 +285,6 @@ foreach ($needed_dates as $date){
 
 # gets the favicon from the function getFavicon and puts the result in the variable $favicon
 $favicon = getFavicon($date_types[$formatted_needed_dates[0]]);
+
+# stores notice that will be displayed on the site (ex. for half days)
+$notice = "<div class='notice'>Friday, May 7th is a half day of school, only morning classes will be followed</div>";

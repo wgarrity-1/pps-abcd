@@ -173,6 +173,16 @@ nav a:hover {
     background-color: white;
 }
 
+.notice {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 #created-by {
     text-align: center;
     font-size: 2rem;

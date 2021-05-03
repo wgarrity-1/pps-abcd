@@ -1,7 +1,7 @@
 <?php
 
 # William Garrity
-# 2/27/2021
+# 5/3/2021
 # Purpose of this PHP code is to grab the day types from the assets/scripts/main.php script and display it on this site for CTE students
 
 # sets the location of the sqlite database file
@@ -69,6 +69,8 @@ include "assets/scripts/main.php";
         <a href="embed/index.php">Embed This Site</a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0q4J-G4v-dvZeb01JuLjBRxiyuKWSyGRxKstK6TLBP4LHMA/viewform?usp=sf_link">Contact Form</a>
     </nav>
+    
+    <?=$notice?>
     
 	<main>
 		
