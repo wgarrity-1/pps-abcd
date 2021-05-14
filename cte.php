@@ -4,6 +4,14 @@
 # 5/3/2021
 # Purpose of this PHP code is to grab the day types from the assets/scripts/main.php script and display it on this site for CTE students
 
+
+# redirect code, if forking please remove
+# redirects to closing page
+header("Location: closed.html");
+die();
+
+
+
 # sets the location of the sqlite database file
 $database_location = "assets/db/abcd-database.db";
 

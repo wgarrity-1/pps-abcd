@@ -151,7 +151,6 @@ header {
 }
 
 nav {
-    min-height: 20px;
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: row;

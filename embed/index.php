@@ -1,5 +1,13 @@
 <?php
 
+
+# redirect code, if forking please remove
+# redirects to closing page
+header("Location: ../closed.html");
+die();
+
+
+
 $iframe_code = [
     "one-day-simple" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/simple.php' height='200' width='200' style='border: 0px;'></iframe>",
     "one-day-middle" => "<iframe src='https://abcd.wgarrity.com/embed/one-day/schedule-middle.php' height='700' width='700' style='border: 0px;'></iframe>",

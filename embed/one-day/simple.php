@@ -1,7 +1,15 @@
 <?php
 # William Garrity
-# 12/31/2020
+# 5/14/2021
 # See index.php in the DirectoryRoot for the purpose because this code does basically the same thing
+
+
+# redirect code, if forking please remove
+# redirects to closing page
+header("Location: ../closed.html");
+die();
+
+
 
 # sets the location of the sqlite database file
 $database_location = "../../assets/db/abcd-database.db";
